@@ -1,0 +1,14 @@
+E:\Programação\cursos\Alura\alura-csharp\ScreenSound\ScreenSound\bin\Debug\net9.0\ScreenSound.exe
+E:\Programação\cursos\Alura\alura-csharp\ScreenSound\ScreenSound\bin\Debug\net9.0\ScreenSound.deps.json
+E:\Programação\cursos\Alura\alura-csharp\ScreenSound\ScreenSound\bin\Debug\net9.0\ScreenSound.runtimeconfig.json
+E:\Programação\cursos\Alura\alura-csharp\ScreenSound\ScreenSound\bin\Debug\net9.0\ScreenSound.dll
+E:\Programação\cursos\Alura\alura-csharp\ScreenSound\ScreenSound\bin\Debug\net9.0\ScreenSound.pdb
+E:\Programação\cursos\Alura\alura-csharp\ScreenSound\ScreenSound\obj\Debug\net9.0\ScreenSound.GeneratedMSBuildEditorConfig.editorconfig
+E:\Programação\cursos\Alura\alura-csharp\ScreenSound\ScreenSound\obj\Debug\net9.0\ScreenSound.AssemblyInfoInputs.cache
+E:\Programação\cursos\Alura\alura-csharp\ScreenSound\ScreenSound\obj\Debug\net9.0\ScreenSound.AssemblyInfo.cs
+E:\Programação\cursos\Alura\alura-csharp\ScreenSound\ScreenSound\obj\Debug\net9.0\ScreenSound.csproj.CoreCompileInputs.cache
+E:\Programação\cursos\Alura\alura-csharp\ScreenSound\ScreenSound\obj\Debug\net9.0\ScreenSound.dll
+E:\Programação\cursos\Alura\alura-csharp\ScreenSound\ScreenSound\obj\Debug\net9.0\refint\ScreenSound.dll
+E:\Programação\cursos\Alura\alura-csharp\ScreenSound\ScreenSound\obj\Debug\net9.0\ScreenSound.pdb
+E:\Programação\cursos\Alura\alura-csharp\ScreenSound\ScreenSound\obj\Debug\net9.0\ScreenSound.genruntimeconfig.cache
+E:\Programação\cursos\Alura\alura-csharp\ScreenSound\ScreenSound\obj\Debug\net9.0\ref\ScreenSound.dll

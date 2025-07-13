@@ -1,0 +1,53 @@
+﻿[
+  {
+    "nome": "Hotel Paraíso Tropical",
+    "logradouro": "Avenida das Palmeiras, 1234",
+    "cidade": "Fortaleza",
+    "pais": "Brasil",
+    "cep": "60177-000",
+    "telefone": "+55 85 3456-7890",
+    "estrelas": 5,
+    "temWifi": true,
+    "temEstacionamento": true,
+    "aceitaAnimais": true,
+    "temPiscina": true,
+    "temAcademia": true,
+    "temRestaurante": true,
+    "descricao": "Um resort à beira-mar com vista deslumbrante, perfeito para férias em família ou lua de mel inesquecível.",
+    "precoMedioDiaria": 649.90
+  },
+  {
+    "nome": "Pousada Serra Azul",
+    "logradouro": "Rua das Hortênsias, 789",
+    "cidade": "Gramado",
+    "pais": "Brasil",
+    "cep": "95670-000",
+    "telefone": "+55 54 3286-1122",
+    "estrelas": 4,
+    "temWifi": true,
+    "temEstacionamento": true,
+    "aceitaAnimais": false,
+    "temPiscina": false,
+    "temAcademia": false,
+    "temRestaurante": true,
+    "descricao": "Charmosa pousada na serra gaúcha com café colonial e lareira em todos os quartos. Ideal para quem busca conforto e clima romântico.",
+    "precoMedioDiaria": 389.00
+  },
+  {
+    "nome": "Hotel Urbano",
+    "logradouro": "Avenida Paulista, 1000",
+    "cidade": "São Paulo",
+    "pais": "Brasil",
+    "cep": "01310-000",
+    "telefone": "+55 11 3333-4444",
+    "estrelas": 3,
+    "temWifi": true,
+    "temEstacionamento": false,
+    "aceitaAnimais": false,
+    "temPiscina": false,
+    "temAcademia": true,
+    "temRestaurante": true,
+    "descricao": "Localizado no coração de São Paulo, ideal para viagens de negócios ou turismo. Próximo a museus e centros comerciais.",
+    "precoMedioDiaria": 250.00
+  }
+]

@@ -40,7 +40,7 @@ public class HotelController : ControllerBase
         _context.Hoteis.Add(hotel); // Add the hotel to the database context
         _context.SaveChanges();
         Console.WriteLine($"Hotel {hotel.Nome} adicionado com sucesso!");
-        return CreatedAtAction(nameof(RecuperaFilmePorId), 
+        return CreatedAtAction(nameof(RecuperaHotelPorId), 
             new { id = hotel.Id }, hotel
         ); // Returns a 201 Created response with the location of the new hotel
     }
@@ -72,7 +72,7 @@ public class HotelController : ControllerBase
     /// Retorna um objeto <see cref="ReadHotelDto"/> com os dados do hotel, ou 404 NotFound se não encontrado.
     /// </returns>
     [HttpGet("{id}")] // Route to retrieve a specific hotel by ID
-    public IActionResult RecuperaFilmePorId(int id)
+    public IActionResult RecuperaHotelPorId(int id)
     {
         // Searches for the hotel by ID
         var hotel = _context.Hoteis.FirstOrDefault(h => h.Id == id);

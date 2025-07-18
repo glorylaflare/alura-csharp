@@ -16,8 +16,8 @@ public class HotelController : ControllerBase
     private static int idCounter = 1; // Static counter to generate unique IDs
     */
     
-    private HotelContext _context; // Database context for accessing hotels
-    private IMapper _mapper; // AutoMapper for mapping DTOs to models
+    private readonly HotelContext _context; // Database context for accessing hotels
+    private readonly IMapper _mapper; // AutoMapper for mapping DTOs to models
 
     public HotelController(HotelContext context, IMapper mapper)
     {
@@ -33,15 +33,14 @@ public class HotelController : ControllerBase
     /// Retorna um status 201 Created com os dados do hotel criado e o local do recurso.
     /// </returns>
     [HttpPost] // Route to add a hotel
-    [ProducesResponseType(StatusCodes.Status201Created)] // Indicates that this action returns a 201 Created response
-    public IActionResult AdicionaHotel([FromBody] CreateHotelDto hotelDto)
+    public ActionResult AdicionaHotel([FromBody] CreateHotelDto hotelDto)
     {
         var hotel = _mapper.Map<Hotel>(hotelDto); // Map the DTO to the Hotel model
         _context.Hoteis.Add(hotel); // Add the hotel to the database context
         _context.SaveChanges();
         Console.WriteLine($"Hotel {hotel.Nome} adicionado com sucesso!");
         return CreatedAtAction(nameof(RecuperaHotelPorId), 
-            new { id = hotel.Id }, hotel
+            new { id = hotel.Id }, hotelDto
         ); // Returns a 201 Created response with the location of the new hotel
     }
 
@@ -52,7 +51,7 @@ public class HotelController : ControllerBase
     /// <param name="take">Número de hotéis a serem retornados.</param>
     /// <returns>Retorna uma lista paginada de hotéis no formato DTO.</returns>
     [HttpGet] // Route to retrieve the list of hotels
-    public IActionResult RecuperaFilmes([FromQuery] int skip = 0, [FromQuery] int take = 10)
+    public ActionResult RecuperaFilmes([FromQuery] int skip = 0, [FromQuery] int take = 10)
     {
         // Returns the list of hotels
         var hoteis = _context.Hoteis
@@ -72,7 +71,7 @@ public class HotelController : ControllerBase
     /// Retorna um objeto <see cref="ReadHotelDto"/> com os dados do hotel, ou 404 NotFound se não encontrado.
     /// </returns>
     [HttpGet("{id}")] // Route to retrieve a specific hotel by ID
-    public IActionResult RecuperaHotelPorId(int id)
+    public ActionResult RecuperaHotelPorId(int id)
     {
         // Searches for the hotel by ID
         var hotel = _context.Hoteis.FirstOrDefault(h => h.Id == id);
@@ -95,7 +94,7 @@ public class HotelController : ControllerBase
     /// Retorna 204 No Content se a atualização for bem-sucedida ou 404 NotFound se o hotel não for encontrado.
     /// </returns>
     [HttpPut("{id}")] // Route to update a hotel by ID
-    public IActionResult AtualizaHotel(int id, [FromBody] UpdateHotelDto hotelDto)
+    public ActionResult AtualizaHotel(int id, [FromBody] UpdateHotelDto hotelDto)
     {
         var hotel = _context.Hoteis.FirstOrDefault(h => h.Id == id);
         
@@ -118,7 +117,7 @@ public class HotelController : ControllerBase
     /// Retorna 204 No Content se a atualização for bem-sucedida, 400 Bad Request se o modelo for inválido ou 404 NotFound se o hotel não for encontrado.
     /// </returns>
     [HttpPatch("{id}")] // Route to update a hotel by ID
-    public IActionResult AtualizaHotelParcial(int id, JsonPatchDocument<UpdateHotelDto> patch)
+    public ActionResult AtualizaHotelParcial(int id, JsonPatchDocument<UpdateHotelDto> patch)
     {
         var hotel = _context.Hoteis.FirstOrDefault(h => h.Id == id);
         
@@ -148,7 +147,7 @@ public class HotelController : ControllerBase
     /// Retorna 204 No Content se a exclusão for bem-sucedida ou 404 NotFound se o hotel não for encontrado.
     /// </returns>
     [HttpDelete("{id}")] // Route to delete a hotel by ID
-    public IActionResult DeletaHotel(int id)
+    public ActionResult DeletaHotel(int id)
     {
         var hotel = _context.Hoteis.FirstOrDefault(h => h.Id == id);
         

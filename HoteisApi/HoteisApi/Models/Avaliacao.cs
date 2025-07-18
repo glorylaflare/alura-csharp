@@ -13,6 +13,9 @@ public class Avaliacao
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public DateTime Data { get; set; }
     
+    public int ClienteId { get; set; }
+    public Cliente Cliente { get; set; }
+    
     public int HotelId { get; set; }
     public Hotel Hotel { get; set; }
 }

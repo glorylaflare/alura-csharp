@@ -13,4 +13,5 @@ public class Cliente
     public string Documento { get; set; }
     
     public ICollection<Reserva> Reservas { get; set; }
+    public ICollection<Avaliacao> Avaliacoes { get; set; }
 }

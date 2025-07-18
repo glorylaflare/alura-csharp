@@ -1,6 +1,7 @@
 ﻿namespace HoteisApi.Data.Dtos;
 
 public record ReadHotelDto(
+    int Id,
     string Nome,
     string Descricao,
     string Telefone,

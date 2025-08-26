@@ -1,14 +1,8 @@
 ﻿using JornadaMilhasV1.Validador;
-using Microsoft.Extensions.Options;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace JornadaMilhasV1.Modelos;
 
-public class Rota: Valida
+public class Rota : Valida
 {
     public int Id { get; set; }
     public string Origem { get; set; }
@@ -18,7 +12,6 @@ public class Rota: Valida
     {
         Origem = origem;
         Destino = destino;
-
     }
 
     protected override void Validar()

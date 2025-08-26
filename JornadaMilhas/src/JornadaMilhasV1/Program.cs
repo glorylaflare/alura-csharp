@@ -9,10 +9,8 @@ gerenciador.CarregarOfertas();
 while (true)
 {
     ExibirMenu();
-
     Console.WriteLine("Boas vindas ao Jornada Milhas. Escolha uma opção:");
     string opcao = Console.ReadLine()!;
-
     switch (opcao)
     {
         case "1":
@@ -31,7 +29,6 @@ while (true)
             Console.WriteLine("Opção inválida. Tente novamente.");
             break;
     }
-
     Console.WriteLine("\nPressione qualquer tecla para continuar...");
     Console.ReadKey();
     Console.Clear();

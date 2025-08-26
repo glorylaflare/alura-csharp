@@ -1,11 +1,7 @@
 ﻿using JornadaMilhasV1.Modelos;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace JornadaMilhasV1.Gerencidor;
+
 public class GerenciadorDeOfertas
 {
     private List<OfertaViagem> ofertaViagem = new List<OfertaViagem>();
@@ -64,7 +60,6 @@ public class GerenciadorDeOfertas
         return false;
 
     }
-
 
     public void CarregarOfertas()
     {

@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace JornadaMilhasV1.Validador;
 
 public class Erros : IEnumerable<Erro>
 {
     private readonly ICollection<Erro> erros = new List<Erro>();
-
     public void RegistrarErro(string mensagem) => erros.Add(new Erro(mensagem));
 
     public IEnumerator<Erro> GetEnumerator()
@@ -36,7 +31,6 @@ public class Erros : IEnumerable<Erro>
 }
 
 public record Erro(string Mensagem);
-
 internal interface IValidavel
 {
     // bool Validar();
